@@ -6,43 +6,126 @@
     <title>教师节快乐</title>
     <style>
         body {
+            background: linear-gradient(-45deg, #282846, #16213e, #0f3460, #1a1a2e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
-            text-align: center;
+            color: #e0e1dd;
             padding: 50px;
+            margin: 0;
+            overflow: hidden;
         }
+
         .card {
-            background-color: #ffffff;
+            background-color: #0d3b66;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
+            animation: bounceIn 2s;
+            border: 1px solid #3a86ff;
         }
+
         h1 {
-            color: #d23669;
+            color: #ffbe0b;
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
         }
+
         p {
             font-size: 18px;
             line-height: 1.6;
+            animation: fadeIn 2s 0.5s backwards;
         }
+
         .signature {
             margin-top: 20px;
             font-style: italic;
-            color: #555;
+            color: #adb5bd;
+            animation: fadeIn 2s 1s backwards;
+        }
+
+        .star {
+            color: #ffbe0b;
+            font-size: 18px;
+            position: absolute;
+            animation: float 6s infinite ease-in-out;
+            opacity: 0.8;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-15px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+        }
+
+        .star:nth-child(odd) {
+            left: 15%;
+            animation-duration: 7s;
+        }
+
+        .star:nth-child(even) {
+            right: 15%;
+            animation-duration: 9s;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>教师节快乐!</h1>
-        <p>亲爱的老师：</p>
-        <p>感谢您的辛勤付出、耐心教导和智慧引领。您的教诲对我的人生产生了深远的影响，我对此永远心存感激。</p>
-        <p>祝您度过一个充满喜悦与感激的美好教师节！</p>
+        <h1>王老师教师节快乐! ✨</h1>
+        <p>亲爱的王老师：</p>
+        <p>感谢您在论文写作和研究方向上的悉心指导，尤其感谢您每次耐心地帮我反复修改论文。</p>
+        <p>祝您科研工作顺利，科研基金申请成功，论文发表顺利！愿您在学术道路上不断取得新的成就，生活幸福安乐，每天元气满满！o(*￣▽￣*)ブ</p>
         <div class="signature">
             <p>- 您的学生</p>
         </div>
     </div>
+
+    <!-- 添加飘动的星星效果 -->
+    <div class="star">★</div>
+    <div class="star">★</div>
+    <div class="star">★</div>
+    <div class="star">★</div>
 </body>
 </html>
